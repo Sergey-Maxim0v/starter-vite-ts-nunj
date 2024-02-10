@@ -1,14 +1,21 @@
 import vituum from "vituum";
 import nunjucks from "@vituum/vite-plugin-nunjucks";
 import postcss from "@vituum/vite-plugin-postcss";
+import posthtml from "@vituum/vite-plugin-posthtml";
+import posthtmlNunjucks from "posthtml-nunjucks";
 
-import sass from "sass";
+import * as sass from "sass";
 
 export default {
   plugins: [
     vituum(),
     nunjucks(),
     postcss(),
+    posthtml({
+      plugins: [
+        posthtmlNunjucks(), // Обработка .njk файлов
+      ],
+    }),
     {
       // Обработка SCSS файлов
       async transform(_, id) {
