@@ -1,2 +1,2 @@
-import   './vite.tsx'
-import './counter.ts'
+import "./vite.tsx";
+import "./counter.ts";
