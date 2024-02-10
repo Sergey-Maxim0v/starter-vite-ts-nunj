@@ -3,6 +3,7 @@ import nunjucks from "@vituum/vite-plugin-nunjucks";
 import postcss from "@vituum/vite-plugin-postcss";
 import posthtml from "@vituum/vite-plugin-posthtml";
 import posthtmlNunjucks from "posthtml-nunjucks";
+import cssnano from "cssnano";
 
 import * as sass from "sass";
 
@@ -10,7 +11,11 @@ export default {
   plugins: [
     vituum(),
     nunjucks(),
-    postcss(),
+    postcss({
+      plugins: [
+        cssnano(), // Для минимизации CSS
+      ],
+    }),
     posthtml({
       plugins: [
         posthtmlNunjucks(), // Обработка .njk файлов
