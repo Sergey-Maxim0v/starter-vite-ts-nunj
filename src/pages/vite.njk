@@ -1,0 +1,15 @@
+{% extends "./src/extends/base.njk" %}
+
+{% block title %}
+    Vite | {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="app" id="app"></div>
+    {% include './src/blocks/pageLinks/pageLinks.njk' %}
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type="module" src="/src/scripts/index.tsx"></script>
+{% endblock %}

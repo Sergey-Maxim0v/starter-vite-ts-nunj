@@ -1,0 +1,20 @@
+// ======= GLOBAL =======
+@import 'global';
+
+// ======= Pages =======
+@import 'pages/home';
+@import 'pages/vite';
+
+// ======= Blocks =======
+@import '../blocks/footer/footer';
+@import '../blocks/header/header';
+@import '../blocks/modals/modals';
+@import '../blocks/icons/icons';
+@import '../blocks/homeTitle/homeTitle';
+@import '../blocks/buttons/buttons';
+@import '../blocks/dependencies/dependencies';
+@import '../blocks/pageLinks/pageLinks';
+
+// ======= Components =======
+@import "../components/link/link";
+@import "../components/button/button";

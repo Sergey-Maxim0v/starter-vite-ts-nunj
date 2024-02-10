@@ -1,0 +1,20 @@
+{#  props: { text: "", url?: "", class?: "", data?: "" }   #}
+{% macro button(props) %}
+    <button
+            class="button {% if props.class %}{{ props.class }}{% endif %}"
+            {% if props.data %}{{ props.data }}{% endif %}
+    >
+        {% if props.url %}
+            <a
+                    href="{{ props.url }}"
+                    target="_blank"
+            >
+                {{ props.text }}
+            </a>
+        {% else %}
+            <p>
+                {{ props.text }}
+            </p>
+        {% endif %}
+    </button>
+{% endmacro %}

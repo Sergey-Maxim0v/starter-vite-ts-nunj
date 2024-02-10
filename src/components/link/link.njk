@@ -1,0 +1,10 @@
+{#  props: { url: "", name: "", class?: "" }   #}
+{% macro link(props) %}
+    <a
+            href="{{ props.url }}"
+            class="link {% if props.class %}{{ props.class }}{% endif %}"
+            target="_blank"
+    >
+        {{ props.name }}
+    </a>
+{% endmacro %}

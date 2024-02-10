@@ -1,0 +1,16 @@
+{% from '../../components/link/link.njk' import link %}
+
+{#  TODO    #}
+{% set Dependencies = [
+    { name: 'ESLint', url: 'https://eslint.org/' },
+    { name: 'Prettier', url: 'https://prettier.io/' },
+    { name: 'PostCSS', url: 'https://vituum.dev/plugins/postcss' }
+] %}
+
+<section class="h-dependencies section">
+    <div class="h-dependencies-list">
+        {% for element in Dependencies %}
+            {{ link({name: element.name, url: element.url, class: 'h-dependencies-element'}) }}
+        {% endfor %}
+    </div>
+</section>

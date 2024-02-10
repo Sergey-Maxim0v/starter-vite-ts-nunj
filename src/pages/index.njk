@@ -1,0 +1,11 @@
+{% extends "./src/extends/base.njk" %}
+
+{% block title %}{{ super() }}{% endblock %}
+
+{% block content %}
+    {% include './src/blocks/icons/icons.njk' %}
+    {% include './src/blocks/homeTitle/homeTitle.njk' %}
+    {% include './src/blocks/buttons/buttons.njk' %}
+    {% include './src/blocks/dependencies/dependencies.njk' %}
+    {% include './src/blocks/pageLinks/pageLinks.njk' %}
+{% endblock %}

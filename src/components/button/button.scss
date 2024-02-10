@@ -1,0 +1,46 @@
+.button {
+  height: 48px;
+  border-radius: 30px;
+  border: 1px solid currentColor;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  text-transform: uppercase;
+  background-color: #242424;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: #242424;
+    background-color: rgba(255, 255, 255, 0.87);
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: #213547;
+    background-color: #ffffff;
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      color: #ffffff;
+      background-color: #213547;
+    }
+  }
+
+  & > * {
+    width: 100%;
+    height: 100%;
+    padding: 0.6rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: inherit;
+  }
+}

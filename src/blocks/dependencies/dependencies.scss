@@ -1,0 +1,15 @@
+.h-dependencies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-list {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  &-element {
+    margin: 20px;
+  }
+}
