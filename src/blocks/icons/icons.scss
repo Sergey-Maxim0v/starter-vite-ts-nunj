@@ -21,15 +21,16 @@
     @media (max-width: 768px) {
       margin: 20px;
     }
+  }
+}
 
-    & > * {
-      width: 100%;
-      height: 100%;
-    }
+.logo {
+  display: block;
+  width: 100%;
+  height: 100%;
 
-    &:last-child > *{
-      min-width: calc(100% + 20px);
-      height: calc(100% + 20px);
-    }
+  &_njk {
+    min-width: calc(100% + 22px);
+    min-height: calc(100% + 22px);
   }
 }

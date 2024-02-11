@@ -1,7 +1,7 @@
 # Vite Vanilla TS Nunjucks Template
 
 [//]: # (TODO: screenshot)
-![screenshot](/public/screenshot.png) 
+![screenshot](public/screenshot.png) 
 
 Template for starting a new multi-page project with Vite.js, Typescript, SCSS and Nunjucks. 
 It's already equipped with standard development tools like ESLint and Prettier.
