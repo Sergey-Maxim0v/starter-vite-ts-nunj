@@ -1,19 +1,19 @@
 function SetupCounter() {
-  const button = document.querySelector<HTMLButtonElement>('#counter')
+  const button = document.querySelector<HTMLButtonElement>('#counter');
 
-  if(!button) {
-    return
+  if (!button) {
+    return;
   }
 
-  let counter = 0
+  let counter = 0;
   const setCounter = (count: number) => {
-    counter = count
-    button.innerHTML = `count is ${counter}`
-  }
+    counter = count;
+    button.innerHTML = `count is ${counter}`;
+  };
 
-  button.addEventListener('click', () => setCounter(counter + 1))
+  button.addEventListener('click', () => setCounter(counter + 1));
 
-  setCounter(0)
+  setCounter(0);
 }
 
-export default SetupCounter()
+export default SetupCounter();

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": " prettier . --write"
   },
   "devDependencies": {
     "@vituum/vite-plugin-nunjucks": "^1.1.0",
@@ -15,6 +16,7 @@
     "@vituum/vite-plugin-twig": "^1.1.0",
     "cssnano": "^6.0.3",
     "posthtml-nunjucks": "^0.1.2",
+    "prettier": "3.2.5",
     "sharp": "^0.33.2",
     "svgo": "^3.2.0",
     "typescript": "^5.3.3",
