@@ -9,7 +9,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import * as sass from 'sass';
 
 export default {
-  // base: '/starter-vite-ts-nunj/',
+  base: '/starter-vite-ts-nunj/',
   plugins: [
     vituum(),
     nunjucks(),
