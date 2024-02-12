@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -9,6 +10,11 @@
       "DOM.Iterable",
       "dom"
     ],
+    "paths": {
+      "body-scroll-lock-upgrade": [
+        "node_modules/body-scroll-lock-upgrade"
+      ]
+    },
     "skipLibCheck": true,
     /* Bundler mode */
     "moduleResolution": "bundler",
