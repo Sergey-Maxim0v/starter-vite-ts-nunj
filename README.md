@@ -40,6 +40,8 @@ It's already equipped with standard development tools like ESLint and Prettier.
 
 - **[the-new-css-reset](https://elad2412.github.io/the-new-css-reset/):** A package that resets some of the default, user agent based, styles.
 
+- **[body-scroll-lock-upgrade](https://github.com/rick-liruixin/body-scroll-lock-upgrade):** Enables body scroll locking without breaking scrolling of a target element.
+
 ---
 
 ## Scripts
@@ -84,9 +86,9 @@ This is the structure of the project:
 ├── public                       # Public assets and resources
 ├── src                          # Source code
 │   ├── assets                   # General assets for your project
-│   │   ├── fonts                
-│   │   ├── images               
-│   │   ├── svg                  
+│   │   ├── fonts                # Font files
+│   │   ├── images               # Image files
+│   │   ├── svg                  # SVG files
 │   ├── blocks                   # Independent page sections
 │   │   ├── block                # Block directiry
 │   │   │   ├──  block.njk       # Block
@@ -98,6 +100,13 @@ This is the structure of the project:
 │   ├── extends                  # njk page templates
 │   ├── pages                    # HTML/njk page files
 │   ├── scripts                  # Typescript files of your project
+│   │   ├── constants            # Constants for scripts
+│   │   ├── modules              # Logic files for the app elements
+│   │   ├── types                # Types for scripts
+│   │   ├── utils                # Utility functions
+│   │   ├── app.ts               # Script for all pages
+│   │   ├── head-scripts.ts      # Imports of styles and other scripts for HTML Head
+│   │   ├── vite.ts              # Script for page Vite
 │   ├── styles                   # SCSS/CSS styles for your project
 │   │   ├── pages                # SCSS styles for pages
 │   │   ├── global.scss          # Global styles

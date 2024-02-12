@@ -1,12 +1,12 @@
 {% from "./_head-scripts.njk" import headScripts %}
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="_loading">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <script type="module" src="/src/scripts/headScripts.ts"></script>
+    <script type="module" src="/src/scripts/head-scripts.ts"></script>
     {{ headScripts() }}
     <title>{% block title %}Starter: Vite Typescript Nunjucks{% endblock %}</title>
     {% block stylesheets %}{% endblock %}
@@ -24,7 +24,7 @@
 {% include '../blocks/modals/modals.njk' %}
 
 {% block scripts %}
-    <script type="module" src="/src/scripts/pageLinks.ts"></script>
+    <script type="module" src="/src/scripts/app.ts"></script>
 {% endblock %}
 </body>
 </html>

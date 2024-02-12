@@ -12,7 +12,10 @@ node_modules
 dist
 dist-ssr
 *.local
+
+# Vite dev files
 +.css
++.js
 
 # Editor directories and files
 .vscode/*
