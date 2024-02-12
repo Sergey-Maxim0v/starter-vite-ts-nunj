@@ -32,6 +32,7 @@
     "vituum": "^1.1.0"
   },
   "dependencies": {
+    "body-scroll-lock-upgrade": "^1.1.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
