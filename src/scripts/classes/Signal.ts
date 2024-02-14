@@ -1,5 +1,5 @@
 export interface ISignal {
-  handler: () => void;
+  handler: VoidFunction;
   context: string;
 }
 

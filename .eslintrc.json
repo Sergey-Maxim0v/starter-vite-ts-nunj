@@ -72,6 +72,7 @@
     "no-continue": "off",
     "no-debugger": "off",
     "@typescript-eslint/ban-types": "warn",
-    "@typescript-eslint/no-explicit-any": "warn"
+    "@typescript-eslint/no-explicit-any": "warn",
+    "no-warning-comments": "warn"
   }
 }

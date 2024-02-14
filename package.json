@@ -8,8 +8,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "format": "prettier ./src/**/*.{css,scss,ts,tsx} --write",
-    "eslint": "eslint src/scripts/**/*.{ts,tsx} --fix",
+    "format": "prettier ./src/**/*.{css,scss,ts} --write",
+    "eslint": "eslint src/scripts/**/*.ts --fix",
     "lint": "npm run format && npm run eslint"
   },
   "devDependencies": {

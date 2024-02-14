@@ -9,5 +9,4 @@ class ViteApp {
   }
 }
 
-/* eslint-disable  @typescript-eslint/no-explicit-any */
 (globalThis as any).ViteApp = new ViteApp();

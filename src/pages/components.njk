@@ -3,7 +3,9 @@
 {% block title %}Components | {{ super() }}{% endblock %}
 
 {% block content %}
-    {#    TODO: modal   #}
+    {% include './src/blocks/modalSample/modalSample.njk' %}
+    {% include './src/blocks/modalForSample/modalForSample.njk' %}
+
     {#    TODO: crumbs   #}
     {#    TODO: accordion   #}
     {#    TODO: select   #}
@@ -11,6 +13,5 @@
     {#    TODO: radio   #}
     {#    TODO: list-marked   #}
     {#    TODO: list-numbered   #}
-
     {% include './src/blocks/pageLinks/pageLinks.njk' %}
 {% endblock %}

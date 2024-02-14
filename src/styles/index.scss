@@ -4,17 +4,22 @@
 // ======= Pages =======
 @import 'pages/home';
 @import 'pages/vite';
+@import 'pages/components';
 
 // ======= Blocks =======
 @import '../blocks/footer/footer';
 @import '../blocks/header/header';
-@import '../blocks/modals/modals';
+@import '../components/modal/modal';
 @import '../blocks/icons/icons';
 @import '../blocks/homeTitle/homeTitle';
 @import '../blocks/buttons/buttons';
 @import '../blocks/dependencies/dependencies';
 @import '../blocks/pageLinks/pageLinks';
+@import '../blocks/modalSample/modalSample';
 
 // ======= Components =======
 @import '../components/link/link';
 @import '../components/button/button';
+
+// ======= Library =======
+@import './lib/fluid-type';
