@@ -7,6 +7,13 @@ class Modals {
   private openerList: Element[] = [];
   private closerList: Element[] = [];
 
+  private keyboardListener(event: KeyboardEvent) {
+    if (event.code === 'Escape') {
+      event.stopPropagation();
+      this.close();
+    }
+  }
+
   constructor() {
     this.modalList = [...document.querySelectorAll('[data-modal]')];
     this.openerList = [...document.querySelectorAll('[data-modal-opener]')];
@@ -29,10 +36,9 @@ class Modals {
   }
 
   open(name?: string | null) {
-    const modal = this.modalList.find((el) => {
-      const elName = el.getAttribute('data-modal');
-      return elName === name;
-    });
+    const modal = this.modalList.find(
+      (el) => el.getAttribute('data-modal') === name,
+    );
 
     if (!modal || !name) {
       return;
@@ -40,11 +46,17 @@ class Modals {
 
     DOCUMENT_CLASS_LIST.add(CLASS_OPEN_HTML);
     modal.classList.add(CLASS_OPEN_MODAL);
+
+    window.addEventListener('keydown', (event) => this.keyboardListener(event));
   }
 
   close() {
     DOCUMENT_CLASS_LIST.remove(CLASS_OPEN_HTML);
     this.modalList.forEach((el) => el.classList.remove(CLASS_OPEN_MODAL));
+
+    window.removeEventListener('keydown', (event) =>
+      this.keyboardListener(event),
+    );
   }
 }
 
