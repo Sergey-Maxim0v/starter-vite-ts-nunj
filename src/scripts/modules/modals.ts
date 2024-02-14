@@ -28,7 +28,7 @@ class Modals {
     );
   }
 
-  open(name?: string) {
+  open(name?: string | null) {
     const modal = this.modalList.find((el) => {
       const elName = el.getAttribute('data-modal');
       return elName === name;
