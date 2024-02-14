@@ -32,6 +32,7 @@
       "error",
       "always"
     ],
+    "@typescript-eslint/dot-notation": "off",
     "prettier/prettier": "off",
     "no-unused-vars": "warn",
     "no-console": "warn",
@@ -73,6 +74,13 @@
     "no-debugger": "off",
     "@typescript-eslint/ban-types": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
-    "no-warning-comments": "warn"
+    "no-warning-comments": "warn",
+    "import/extensions": ["error", {
+      "js": "never",
+      "mjs": "never",
+      "jsx": "never",
+      "ts": "never",
+      "tsx": "never"
+    }]
   }
 }

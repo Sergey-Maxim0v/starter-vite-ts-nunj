@@ -1,3 +1,5 @@
+import ScrollLocker from '../utils/scroll-locker';
+
 const DOCUMENT_CLASS_LIST = document.documentElement.classList;
 const CLASS_OPEN_HTML = '_modal-open';
 const CLASS_OPEN_MODAL = '_open';
@@ -46,6 +48,7 @@ class Modals {
 
     DOCUMENT_CLASS_LIST.add(CLASS_OPEN_HTML);
     modal.classList.add(CLASS_OPEN_MODAL);
+    ScrollLocker.disable(modal as HTMLElement);
 
     window.addEventListener('keydown', (event) => this.keyboardListener(event));
   }
@@ -53,6 +56,8 @@ class Modals {
   close() {
     DOCUMENT_CLASS_LIST.remove(CLASS_OPEN_HTML);
     this.modalList.forEach((el) => el.classList.remove(CLASS_OPEN_MODAL));
+
+    ScrollLocker.clear();
 
     window.removeEventListener('keydown', (event) =>
       this.keyboardListener(event),
