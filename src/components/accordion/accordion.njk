@@ -1,0 +1,33 @@
+{#  props: { name: "", title: "", list: [""], class?: "", classTitle?: "" , classList?: "",
+                classElement?: "", classIcon?: "" }   #}
+{% macro accordion(props) %}
+    <div data-accordion="sample" class="accordion {% if props.class %}{{ props.class }}{% endif %}">
+        <div data-accordion-opener="sample" class="accordion-top">
+            <h5 class="accordion-title {% if props.classTitle %}{{ props.classTitle }}{% endif %}">
+                {{ props.title }}
+            </h5>
+
+            <svg
+                    class="accordion-icon {% if props.classIcon %}{{ props.classIcon }}{% endif %}"
+                    width="800px" height="800px" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+            >
+                <path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z"
+                      fill="currentColor" />
+            </svg>
+        </div>
+
+        <div data-accordion-list="sample" class="accordion-list-row">
+            <ul
+                    data-accordion-list="sample"
+                    class="accordion-list {% if props.classList %}{{ props.classList }}{% endif %}"
+            >
+                {% for element in props.list %}
+                    <li class="accordion-element {% if props.classElement %}{{ props.classElement }}{% endif %}">
+                        {{ element }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endmacro %}

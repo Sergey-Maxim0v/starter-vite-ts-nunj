@@ -1,0 +1,26 @@
+{% from '../../components/accordion/accordion.njk' import accordion %}
+
+
+<section class="s-accordion section s-section">
+    <h3 class="s-accordion-title s-title">
+        Accordion
+    </h3>
+
+
+    {{ accordion({
+        name: "sample",
+        title: "Lorem ipsum dolor sit amet.",
+        list: [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto deserunt maxime repellat sapiente temporibus, totam voluptatum?",
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi delectus ratione tempore.",
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur eveniet in itaque ut voluptates?",
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi delectus ratione tempore.",
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid officiis quaerat rerum voluptate! Maiores obcaecati perferendis sit! Accusamus animi impedit laudantium officiis soluta velit!"
+        ],
+        class: "sample-accordion",
+        classTitle: "sample-accordion-title" ,
+        classIcon: "sample-accordion-button",
+        classList: "sample-accordion-List",
+        classElement: "sample-accordion-element"
+    }) }}
+</section>

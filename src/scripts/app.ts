@@ -4,6 +4,7 @@ import ScrollLocker from './utils/scroll-locker.ts';
 import Signal from './classes/Signal.ts';
 import PageLinks from './modules/page-links.ts';
 import Modals from './modules/modals.ts';
+import Accordions from './modules/accordions.ts';
 
 class App {
   env = {};
@@ -13,8 +14,8 @@ class App {
 
   constructor() {
     this.env = { ...env };
-    this.utils = { ...utils, ScrollLocker, Modals };
-    this.modules = { PageLinks };
+    this.utils = { ...utils, ScrollLocker };
+    this.modules = { PageLinks, Modals, Accordions };
     this.classes = { Signal };
   }
 }
