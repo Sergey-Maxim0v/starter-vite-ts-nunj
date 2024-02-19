@@ -1,0 +1,22 @@
+{% from '../../components/listNumbered/listNumbered.njk' import listNumbered %}
+
+<section class="s-list-numbered section s-section">
+    <h3 class="s-list-numbered-title s-title">
+        List numbered
+    </h3>
+
+    {{ listNumbered({
+        list: [
+            "Lorem ipsum dolor sit.",
+            "Lorem ipsum dolor.",
+            "Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet, consectetur.",
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Ipsam ipsum laboriosam perferendis quae repellat.
+            Amet commodi, consequatur dicta dolor enim incidunt
+            laudantium neque nihil quia repellat sequi similique sit veritatis."
+        ],
+        class: "s-list-numbered-list",
+        classElement: "s-list-numbered-element"
+    }) }}
+</section>

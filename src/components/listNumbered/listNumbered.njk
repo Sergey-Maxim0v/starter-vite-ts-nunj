@@ -1,0 +1,10 @@
+{#  props: { list: [""], class?:"", classElement?:"" }   #}
+{% macro listNumbered(props) %}
+    <ul class="list-numbered {% if props.class %}{{ props.class }}{% endif %}">
+        {% for element in props.list %}
+            <li class="list-numbered-element {% if props.classElement %}{{ props.classElement }}{% endif %}">
+                {{ element }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}

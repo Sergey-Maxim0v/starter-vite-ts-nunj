@@ -1,0 +1,32 @@
+$size-number: 40px;
+
+.list-numbered {
+  counter-reset: list-number;
+  width: min(500px, 100%);
+}
+
+.list-numbered-element {
+  min-height: $size-number;
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0 0.5rem calc($size-number + 1rem);
+  counter-increment: list-number;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    content: counter(list-number);
+    position: absolute;
+    left: 0;
+    bottom: calc(100% - $size-number);
+    width: $size-number;
+    height: $size-number;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+}
