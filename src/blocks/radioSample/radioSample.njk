@@ -1,0 +1,47 @@
+{% from '../../components/inputRadio/inputRadio.njk' import inputRadio %}
+
+<section class="s-radio section s-section">
+    <h3 class="s-radio-title s-title">
+        Radio
+    </h3>
+
+    <div class="s-radio-content">
+        <form action="/" class="s-radio-form">
+            {{ inputRadio({
+                name: "sample",
+                id: "checked",
+                value: "checked",
+                content: "checked",
+                checked: true,
+                class: "s-radio-element"
+            }) }}
+
+            {{ inputRadio({
+                name: "sample",
+                id: "default",
+                value: "default",
+                content: "default",
+                class: "s-radio-element"
+            }) }}
+
+            {{ inputRadio({
+                name: "sample",
+                id: "disabled",
+                value: "disabled",
+                content: "disabled",
+                disabled: true,
+                class: "s-radio-element"
+            }) }}
+        </form>
+
+        {{ inputRadio({
+            name: "sample",
+            id: "checked-disabled",
+            value: "checked-disabled",
+            content: "checked-disabled",
+            disabled: true,
+            checked: true,
+            class: "s-radio-element"
+        }) }}
+    </div>
+</section>

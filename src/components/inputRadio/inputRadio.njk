@@ -1,0 +1,22 @@
+{#  props: { name: "", id: "", value: "", content: "",
+                checked?: boolean, disabled?: boolean,
+                class?:"", classLabel?:"", classInput?:"" }   #}
+{% macro inputRadio(props) %}
+    <div class="radio {% if props.class %}{{ props.class }}{% endif %}">
+        <input
+                type="radio"
+                {% if props.checked %}checked{% endif %}
+                {% if props.disabled %}disabled{% endif %}
+                id="{{ props.id }}"
+                name="{{ props.name }}"
+                class="radio-input {% if props.classInput %}{{ props.classInput }}{% endif %}"
+        >
+        <label
+                for="{{ props.id }}"
+                class="radio-label {% if props.classLabel %}{{ props.classLabel }}{% endif %}"
+        >
+            {{ props.content }}
+        </label>
+        <div class="radio-marker"></div>
+    </div>
+{% endmacro %}
