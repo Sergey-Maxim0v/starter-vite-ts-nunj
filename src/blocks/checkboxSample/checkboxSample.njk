@@ -1,0 +1,42 @@
+{% from '../../components/checkbox/checkbox.njk' import checkbox %}
+
+<section class="s-checkbox section s-section">
+    <h3 class="s-title">
+        Checkbox
+    </h3>
+
+    <div class="s-checkbox-content">
+        {{ checkbox({
+            name: "sample",
+            id: "checkbox-checked",
+            value: "checkbox-checked",
+            content: "checked",
+            checked: true,
+            class: "s-checkbox-element"
+        }) }}
+        {{ checkbox({
+            name: "sample",
+            id: "checkbox-default",
+            value: "checkbox-default",
+            content: "dafault",
+            class: "s-checkbox-element"
+        }) }}
+        {{ checkbox({
+            name: "sample",
+            id: "checkbox-disabled",
+            value: "checkbox-disabled",
+            content: "disabled",
+            disabled: true,
+            class: "s-checkbox-element"
+        }) }}
+        {{ checkbox({
+            name: "sample",
+            id: "checkbox-checked-disabled",
+            value: "checkbox-checked-disabled",
+            content: "checked-disabled",
+            checked: true,
+            disabled: true,
+            class: "s-checkbox-element"
+        }) }}
+    </div>
+</section>

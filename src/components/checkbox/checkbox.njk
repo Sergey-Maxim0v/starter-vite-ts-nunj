@@ -1,0 +1,33 @@
+{#  props: { name: "", id: "", value: "", content: "",
+                checked?: boolean, disabled?: boolean,
+                class?:"", classLabel?:"", classInput?:"" }   #}
+{% macro checkbox(props) %}
+    <div class="checkbox {% if props.class %}{{ props.class }}{% endif %}">
+        <input
+                type="checkbox"
+                {% if props.checked %}checked{% endif %}
+                {% if props.disabled %}disabled{% endif %}
+                id="{{ props.id }}"
+                name="{{ props.name }}"
+                class="checkbox-input {% if props.classInput %}{{ props.classInput }}{% endif %}"
+        >
+        <label
+                for="{{ props.id }}"
+                class="checkbox-label {% if props.classLabel %}{{ props.classLabel }}{% endif %}"
+        >
+            {{ props.content }}
+        </label>
+        <div class="checkbox-marker">
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px" y="0px"
+                    width="64"
+                    height="64"
+                    viewBox="0 0 64 64"
+                    fill="currentColor"
+            >
+                <path d="M27 55L6 33 9 29 26 41 55 12 59 16z"></path>
+            </svg>
+        </div>
+    </div>
+{% endmacro %}
