@@ -5,6 +5,7 @@ import Signal from './classes/Signal.ts';
 import PageLinks from './modules/page-links.ts';
 import Modals from './modules/modals.ts';
 import Accordions from './modules/accordions.ts';
+import Selects from './modules/selects.ts';
 
 class App {
   env = {};
@@ -15,7 +16,7 @@ class App {
   constructor() {
     this.env = { ...env };
     this.utils = { ...utils, ScrollLocker };
-    this.modules = { PageLinks, Modals, Accordions };
+    this.modules = { PageLinks, Modals, Accordions, Selects };
     this.classes = { Signal };
   }
 }

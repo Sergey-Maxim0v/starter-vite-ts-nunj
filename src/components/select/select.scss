@@ -1,0 +1,123 @@
+$select-size-icon: 16px;
+$select-padding-element: 0.5rem 1rem;
+$select-border-radius: 0.5rem;
+$transition-duration: 0.2s;
+.select {
+  position: relative;
+
+  &._open {
+    z-index: 300;
+  }
+}
+
+.select-title {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 46px;
+  overflow: hidden;
+  border: 1px solid currentColor;
+  border-radius: $select-border-radius;
+  font-size: 1.2rem;
+  letter-spacing: 0.03rem;
+  cursor: pointer;
+
+  .select._open & {
+    border-radius: $select-border-radius $select-border-radius 0 0;
+  }
+
+  &:hover {
+    transition: border-color $transition-duration;
+    border-color: blueviolet;
+  }
+
+  & span {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    padding: $select-padding-element;
+    padding-right: calc(1rem + $select-size-icon);
+    word-break: break-word;
+  }
+}
+
+.select-icon {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: $select-size-icon;
+  height: $select-size-icon;
+
+  .select._open & {
+    transition: transform $transition-duration;
+    transform: translateY(-50%) rotateX(180deg);
+  }
+
+  .select-title:hover & {
+    transition: color $transition-duration;
+    color: blueviolet;
+  }
+}
+
+.select-list {
+  width: 100%;
+  min-height: 0;
+  background-color: #242424;
+
+  @media (prefers-color-scheme: light) {
+    background-color: #ffffff;
+  }
+
+  &-row {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s;
+    overflow: hidden;
+
+    ._open & {
+      grid-template-rows: 1fr;
+    }
+  }
+}
+
+.select-item {
+  width: 100%;
+  border: 1px solid currentColor;
+  border-top: none;
+  overflow: hidden;
+  word-break: break-word;
+  display: flex;
+
+  &:last-child {
+    border-radius: 0 0 $select-border-radius $select-border-radius;
+  }
+
+  & input {
+    display: none;
+
+    &:checked ~ label {
+      color: blue;
+    }
+
+    &:disabled ~ label {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  & label {
+    min-width: 100%;
+    height: auto;
+    padding: $select-padding-element;
+    cursor: pointer;
+
+    &:hover {
+      transition: color $transition-duration;
+      color: blueviolet;
+    }
+  }
+}

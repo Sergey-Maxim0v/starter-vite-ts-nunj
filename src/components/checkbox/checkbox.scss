@@ -38,11 +38,13 @@ $time-checkbox-transition: 0.2s;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0);
     width: 180%;
     height: 180%;
     color: transparent;
-    transition: color $time-checkbox-transition;
+    transition:
+      color $time-checkbox-transition,
+      transform $time-checkbox-transition;
   }
 }
 
@@ -58,6 +60,7 @@ $time-checkbox-transition: 0.2s;
 //checked
 .checkbox-input:checked {
   & ~ .checkbox-marker svg {
+    transform: translate(-50%, -50%) scale(1);
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
 

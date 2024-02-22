@@ -1,0 +1,46 @@
+{#  props: { id: "", placeholder: "",
+                list: [{ id: "", value: "", content: "", default:? boolean, disabled?: boolean }],
+                class?: "", classList?: "", classTitle?: "", classItem?: "", classIcon?: "" }   #}
+{% macro select(props) %}
+    <div
+            data-select="{{ props.id }}"
+            class="select {% if props.class %}{{ props.class }}{% endif %}"
+    >
+        <button data-select-opener type="button" class="select-title {% if props.classTitle %}{{ props.classTitle }}{% endif %}">
+            <span data-select-title>
+                {{ props.placeholder }}
+            </span>
+            <svg
+                    class="select-icon {% if props.classIcon %}{{ props.classIcon }}{% endif %}"
+                    width="800px" height="800px" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+            >
+                <path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z"
+                      fill="currentColor" />
+            </svg>
+        </button>
+
+        <div class="select-list-row">
+            <ul class="select-list {% if props.classList %}{{ props.classList }}{% endif %}">
+                {% for item in props.list %}
+                    <li
+                            class="select-item {% if props.classItem %}{{ props.classItem }}{% endif %} {% if item.disabled %}_disabled{% endif %}"
+                    >
+                        <input
+                                data-select-input="{{ item.content }}"
+                                name="{{ props.id }}"
+                                id="{{ item.id }}"
+                                value="{{ item.value }}"
+                                type="radio"
+                                {% if item.disabled %}disabled{% endif %}
+                                {% if item.default %}checked{% endif %}
+                        >
+                        <label for="{{ item.id }}">
+                            {{ item.content }}
+                        </label>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endmacro %}

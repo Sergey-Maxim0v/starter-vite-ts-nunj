@@ -1,0 +1,36 @@
+{% from '../../components/select/select.njk' import select %}
+
+<section class="s-select section s-section">
+    <h3 class="s-select-title s-title">
+        Select
+    </h3>
+
+    <div class="s-select-content">
+        {{ select({
+            placeholder: "",
+            id: "select-sample",
+            list: [
+                { id: "select-value-1", content: "Green", value: "Green", default: true },
+                { id: "select-value-2", content: "Red" , value: "Red" },
+                { id: "select-value-3", content: "Yellow" , value: "Yellow" },
+                { id: "select-value-5", content: "disabled", value: "disabled", disabled: true }
+            ],
+            class: "s-select-element",
+            classList: "",
+            classTitle: "",
+            classItem: "",
+            classIcon: ""
+        }) }}
+
+        {{ select({
+            placeholder: "Select a value",
+            id: "select-sample-2",
+            list: [
+                { id: "select-2-value-1", content: "value-1", value: "value-1" },
+                { id: "select-2-value-2", content: "value-2", value: "value-2" },
+                { id: "select-2-value-3", content: "value-3", value: "value-3" }
+            ],
+            class: "s-select-element"
+        }) }}
+    </div>
+</section>
